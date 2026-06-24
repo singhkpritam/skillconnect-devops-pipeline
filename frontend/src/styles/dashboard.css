@@ -1,0 +1,33 @@
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  background: #f8fafc;        /* slate-50 */
+  color: #0f172a;             /* slate-900 */
+  outline: none;
+  transition: 0.2s ease;
+  font-size: 14px;
+}
+
+.input::placeholder {
+  color: #94a3b8; /* slate-400 */
+}
+
+.input {
+  transition: all 0.2s ease-in-out;
+}
+
+textarea.input {
+  height: 110px;
+  padding-top: 10px;
+  resize: none;
+}
+
+.input:focus {
+ 
+   border-color: #64748b; /* slate-500 */
+
+  box-shadow: 0 0 0 3px rgba(100,116,139,0.2);
+}
