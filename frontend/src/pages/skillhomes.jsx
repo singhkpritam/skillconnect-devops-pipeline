@@ -6,6 +6,8 @@ function SkillHomes() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState("");
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   useEffect(() => {
     fetchFreelancers();
   }, []);
@@ -13,7 +15,7 @@ function SkillHomes() {
   const fetchFreelancers = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/skills"
+        `${API_URL}/skills`
       );
 
       setData(response.data);
@@ -25,7 +27,7 @@ function SkillHomes() {
   const deleteSkill = async (id) => {
     try {
       await axios.delete(
-        `http://localhost:5000/api/skills/${id}`
+        `${API_URL}/skills/${id}`
       );
 
       fetchFreelancers();

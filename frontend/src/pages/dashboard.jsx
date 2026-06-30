@@ -5,6 +5,8 @@ import "../styles/dashboard.css";
 function Dashboard() {
   const [success, setSuccess] = useState(false);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [form, setForm] = useState({
     fullName: "",
     professionalTitle: "",
@@ -30,7 +32,7 @@ function Dashboard() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/skills",
+        `${API_URL}/skills`,
         form
       );
 
@@ -187,3 +189,4 @@ function Dashboard() {
 }
 
 export default Dashboard;
+
