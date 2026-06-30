@@ -46,7 +46,7 @@ function SkillHomes() {
   return (
     <div className="max-w-7xl mx-auto p-6 pt-24">
       <h2 className="text-3xl font-bold mb-6">
-        Available Freelancers
+        Available Skill People 
       </h2>
 
       <div className="mb-6">
